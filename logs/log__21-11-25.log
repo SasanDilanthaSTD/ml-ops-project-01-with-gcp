@@ -1,5 +1,0 @@
-2025-11-21 00:59:08,134 - __main__ - INFO - Starting main function
-2025-11-21 00:59:08,134 - __main__ - ERROR - Error occured
-2025-11-21 00:59:08,134 - __main__ - ERROR - Error occurred in script: D:\Course-work\001\project_1\ml-ops-project_1\test.py at line number: 9 with message: Custom Error: division by zero
-2025-11-21 01:00:21,506 - __main__ - INFO - Starting main function
-2025-11-21 01:00:21,506 - __main__ - INFO - deviding 15 over 5

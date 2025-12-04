@@ -1,0 +1,17 @@
+2025-12-05 00:33:35,725 - utils.common_functions - INFO - Successfully readed yml file at D:\Course-work\001\project_1\ml-ops-project_1\config\config.yml
+2025-12-05 00:33:35,726 - __main__ - INFO - ================> Data ingestion started with GCP bucket: ds_mlops_learn_bucket_0001 and file: dataset_hotel_reservations.csv
+2025-12-05 00:33:47,746 - __main__ - ERROR - ---:( Error downloading data from GCP: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+2025-12-05 00:33:47,746 - __main__ - ERROR - ---:( Data ingestion process failed: Error occurred in script: D:\Course-work\001\project_1\ml-ops-project_1\src\data_ingestion.py at line number: 37 with message: ---:( Data download failed: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+2025-12-05 00:33:47,753 - __main__ - INFO - ================> Data ingestion process finished.
+2025-12-05 00:36:21,008 - utils.common_functions - INFO - Successfully readed yml file at D:\Course-work\001\project_1\ml-ops-project_1\config\config.yml
+2025-12-05 00:36:21,009 - __main__ - INFO - ================> Data ingestion started with GCP bucket: ds_mlops_learn_bucket_0001 and file: dataset_hotel_reservations.csv
+2025-12-05 00:36:32,839 - __main__ - ERROR - ---:( Error downloading data from GCP: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+2025-12-05 00:36:32,840 - __main__ - ERROR - ---:( Data ingestion process failed: Error occurred in script: D:\Course-work\001\project_1\ml-ops-project_1\src\data_ingestion.py at line number: 37 with message: ---:( Data download failed: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+2025-12-05 00:36:32,840 - __main__ - INFO - ================> Data ingestion process finished.
+2025-12-05 00:48:12,944 - utils.common_functions - INFO - Successfully readed yml file at D:\Course-work\001\project_1\ml-ops-project_1\config\config.yml
+2025-12-05 00:48:12,944 - __main__ - INFO - ================> Data ingestion started with GCP bucket: ds_mlops_learn_bucket_0001 and file: dataset_hotel_reservations.csv
+2025-12-05 00:48:34,141 - __main__ - INFO - ---:) Data downloaded successfully from GCP bucket ds_mlops_learn_bucket_0001 to D:\Course-work\001\project_1\ml-ops-project_1\artifacts/raw\raw_data.csv
+2025-12-05 00:48:34,386 - __main__ - INFO - ---:) Training data saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts/raw\train_data.csv
+2025-12-05 00:48:34,413 - __main__ - INFO - ---:) Testing data saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts/raw\test_data.csv
+2025-12-05 00:48:34,415 - __main__ - INFO - ---:) Data ingestion process completed successfully.
+2025-12-05 00:48:34,415 - __main__ - INFO - ================> Data ingestion process finished.
