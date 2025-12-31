@@ -11,3 +11,4 @@ src/custom_exception.py
 src/data_ingestion.py
 src/logger.py
 utils/__init__.py
+utils/common_functions.py

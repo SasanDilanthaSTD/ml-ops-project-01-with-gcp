@@ -7,5 +7,13 @@ Requires-Dist: numpy
 Requires-Dist: google-cloud-storage
 Requires-Dist: scikit-learn
 Requires-Dist: pyyaml
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: jupyterlab
+Requires-Dist: plotly
+Requires-Dist: statsmodels
+Requires-Dist: imbalanced-learn
+Requires-Dist: xgboost
+Requires-Dist: lightgbm
 Dynamic: author
 Dynamic: requires-dist
