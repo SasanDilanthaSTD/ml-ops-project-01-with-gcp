@@ -1,1 +1,11 @@
 .venv
+
+*.pkl
+__pycache__/
+.ipynb_checkpoints
+.DS_Store
+
+# Jupyter Notebook checkpoints
+*.ipynb_checkpoints/
+# VSCode settings
+.vscode/
