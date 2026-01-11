@@ -1,0 +1,43 @@
+2026-01-11 19:00:42,541 - utils.common_functions - INFO - Successfully readed yml file at D:\Course-work\001\project_1\ml-ops-project_1\config\config.yml
+2026-01-11 19:00:42,541 - __main__ - INFO - Created directory for processed data at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing
+2026-01-11 19:00:42,541 - __main__ - INFO - [DataProcessor] : Loading data from RAW directory
+2026-01-11 19:00:42,597 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\raw\train_data.csv
+2026-01-11 19:00:42,616 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\raw\test_data.csv
+2026-01-11 19:00:42,616 - __main__ - INFO - [DataProcessor] : Starting data processing...
+2026-01-11 19:00:42,616 - __main__ - INFO - [DataProcessor] : Dropping the unused columns
+2026-01-11 19:00:42,645 - __main__ - INFO - [DataProcessor] : Applying Label Encoding to categorical columns
+2026-01-11 19:00:42,659 - __main__ - INFO - [DataProcessor] : Label Mapping are:
+2026-01-11 19:00:42,659 - __main__ - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+2026-01-11 19:00:42,660 - __main__ - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2026-01-11 19:00:42,660 - __main__ - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+2026-01-11 19:00:42,660 - __main__ - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+2026-01-11 19:00:42,660 - __main__ - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2026-01-11 19:00:42,660 - __main__ - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+2026-01-11 19:00:42,660 - __main__ - INFO - [DataProcessor] : Skewness handling using log1p transformation
+2026-01-11 19:00:42,664 - __main__ - INFO - [DataProcessor] : Data processing completed.
+2026-01-11 19:00:42,664 - __main__ - INFO - [DataProcessor] : Starting data processing...
+2026-01-11 19:00:42,664 - __main__ - INFO - [DataProcessor] : Dropping the unused columns
+2026-01-11 19:00:42,668 - __main__ - INFO - [DataProcessor] : Applying Label Encoding to categorical columns
+2026-01-11 19:00:42,673 - __main__ - INFO - [DataProcessor] : Label Mapping are:
+2026-01-11 19:00:42,673 - __main__ - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+2026-01-11 19:00:42,673 - __main__ - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2026-01-11 19:00:42,673 - __main__ - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+2026-01-11 19:00:42,673 - __main__ - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+2026-01-11 19:00:42,673 - __main__ - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2026-01-11 19:00:42,674 - __main__ - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+2026-01-11 19:00:42,674 - __main__ - INFO - [DataProcessor] : Skewness handling using log1p transformation
+2026-01-11 19:00:42,676 - __main__ - INFO - [DataProcessor] : Data processing completed.
+2026-01-11 19:00:42,676 - __main__ - INFO - [DataProcessor] : Handling data imbalance using SMOTE
+2026-01-11 19:00:47,237 - __main__ - INFO - [DataProcessor] : Data balancing completed.
+2026-01-11 19:00:47,238 - __main__ - INFO - [DataProcessor] : Handling data imbalance using SMOTE
+2026-01-11 19:00:47,253 - __main__ - INFO - [DataProcessor] : Data balancing completed.
+2026-01-11 19:00:47,253 - __main__ - INFO - [DataProcessor] : Starting feature selection using RandomForestClassifier
+2026-01-11 19:00:50,003 - __main__ - INFO - [DataProcessor] : Top 10 features selected: ['lead_time' 'no_of_special_requests' 'avg_price_per_room' 'arrival_month'
+ 'arrival_date' 'market_segment_type' 'no_of_week_nights'
+ 'no_of_weekend_nights' 'room_type_reserved' 'type_of_meal_plan']
+2026-01-11 19:00:50,004 - __main__ - INFO - [DataProcessor] : Feature selection completed.
+2026-01-11 19:00:50,012 - __main__ - INFO - [DataProcessor] : Saving processed data to D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-11 19:00:50,078 - __main__ - INFO - [DataProcessor] : Processed data saved successfully at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-11 19:00:50,078 - __main__ - INFO - [DataProcessor] : Saving processed data to D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-11 19:00:50,097 - __main__ - INFO - [DataProcessor] : Processed data saved successfully at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-11 19:00:50,097 - __main__ - INFO - [DataProcessor] : Data processing pipeline completed successfully.
