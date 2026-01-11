@@ -1,6 +1,9 @@
 .venv
 
+*.h5
 *.pkl
+*.pt
+*.onnx
 __pycache__/
 .ipynb_checkpoints
 .DS_Store
