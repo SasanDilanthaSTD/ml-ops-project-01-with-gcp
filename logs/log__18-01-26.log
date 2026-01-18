@@ -1,67 +1,74 @@
-2026-01-18 00:11:54,593 - __main__ - INFO - [ModelTrainer] Starting model training pipeline
-2026-01-18 00:11:54,593 - __main__ - INFO - [ModelTrainer] Loading training data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
-2026-01-18 00:11:54,614 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
-2026-01-18 00:11:54,614 - __main__ - INFO - [ModelTrainer] Loading testing data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
-2026-01-18 00:11:54,624 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
-2026-01-18 00:11:54,626 - __main__ - INFO - [ModelTrainer] Successfully split data into features and target
-2026-01-18 00:11:54,626 - __main__ - INFO - [ModelTrainer] Initializing LightGBM classifier
-2026-01-18 00:11:54,626 - __main__ - INFO - [ModelTrainer] Starting Randomized Search CV for hyperparameter tuning
-2026-01-18 00:11:54,626 - __main__ - INFO - [ModelTrainer] Fitting Randomized Search CV
-2026-01-18 00:12:55,013 - __main__ - INFO - [ModelTrainer] Best hyperparameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.19524445288831496), 'max_depth': 26, 'n_estimators': 352, 'num_leaves': 255}
-2026-01-18 00:12:55,013 - __main__ - INFO - [ModelTrainer] Completing model training
-2026-01-18 00:12:55,013 - __main__ - INFO - [ModelTrainer] Evaluating model performance on test data
-2026-01-18 00:12:55,100 - __main__ - INFO - [ModelTrainer] Accuracy: 0.8790725326991676
-2026-01-18 00:12:55,103 - __main__ - INFO - [ModelTrainer] Precision: 0.8593327321911632
-2026-01-18 00:12:55,106 - __main__ - INFO - [ModelTrainer] Recall: 0.9065398335315101
-2026-01-18 00:12:55,109 - __main__ - INFO - [ModelTrainer] F1 Score: 0.8823052887397292
-2026-01-18 00:12:55,110 - __main__ - INFO - [ModelTrainer] Saving model ...
-2026-01-18 00:12:55,272 - __main__ - INFO - [ModelTrainer] Model saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\models\lgbm_model.pkl
-2026-01-18 00:12:55,272 - __main__ - INFO - [ModelTrainer] Model training pipeline completed successfully
-2026-01-18 12:13:04,993 - __main__ - INFO - [ModelTrainer] Starting model training pipeline
-2026-01-18 12:13:04,993 - __main__ - INFO - [ModelTrainer] Start the model tracking with MLflow...
-2026-01-18 12:13:04,993 - __main__ - INFO - [ModelTrainer] Logging the traing & testing dat to MLflow
-2026-01-18 12:13:05,010 - __main__ - INFO - [ModelTrainer] Loading training data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
-2026-01-18 12:13:05,040 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
-2026-01-18 12:13:05,040 - __main__ - INFO - [ModelTrainer] Loading testing data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
-2026-01-18 12:13:05,061 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
-2026-01-18 12:13:05,069 - __main__ - INFO - [ModelTrainer] Successfully split data into features and target
-2026-01-18 12:13:05,069 - __main__ - INFO - [ModelTrainer] Initializing LightGBM classifier
-2026-01-18 12:13:05,069 - __main__ - INFO - [ModelTrainer] Starting Randomized Search CV for hyperparameter tuning
-2026-01-18 12:13:05,069 - __main__ - INFO - [ModelTrainer] Fitting Randomized Search CV
-2026-01-18 12:13:58,380 - __main__ - INFO - [ModelTrainer] Best hyperparameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.19524445288831496), 'max_depth': 26, 'n_estimators': 352, 'num_leaves': 255}
-2026-01-18 12:13:58,380 - __main__ - INFO - [ModelTrainer] Completing model training
-2026-01-18 12:13:58,380 - __main__ - INFO - [ModelTrainer] Evaluating model performance on test data
-2026-01-18 12:13:58,469 - __main__ - INFO - [ModelTrainer] Accuracy: 0.8790725326991676
-2026-01-18 12:13:58,472 - __main__ - INFO - [ModelTrainer] Precision: 0.8593327321911632
-2026-01-18 12:13:58,475 - __main__ - INFO - [ModelTrainer] Recall: 0.9065398335315101
-2026-01-18 12:13:58,478 - __main__ - INFO - [ModelTrainer] F1 Score: 0.8823052887397292
-2026-01-18 12:13:58,479 - __main__ - INFO - [ModelTrainer] Saving model ...
-2026-01-18 12:13:58,640 - __main__ - INFO - [ModelTrainer] Model saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\models\lgbm_model.pkl
-2026-01-18 12:13:58,640 - __main__ - INFO - [ModelTrainer] Logging model to MLflow
-2026-01-18 12:13:58,645 - __main__ - INFO - [ModelTrainer] Logging evaluation metrics to MLflow
-2026-01-18 12:13:58,659 - __main__ - INFO - [ModelTrainer] Logging parameters to MLflow
-2026-01-18 12:13:58,672 - __main__ - INFO - [ModelTrainer] Model training pipeline completed successfully
-2026-01-18 12:24:25,815 - __main__ - INFO - [ModelTrainer] Starting model training pipeline
-2026-01-18 12:24:25,815 - __main__ - INFO - [ModelTrainer] Start the model tracking with MLflow...
-2026-01-18 12:24:25,816 - __main__ - INFO - [ModelTrainer] Logging the traing & testing dat to MLflow
-2026-01-18 12:24:25,831 - __main__ - INFO - [ModelTrainer] Loading training data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
-2026-01-18 12:24:25,861 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
-2026-01-18 12:24:25,861 - __main__ - INFO - [ModelTrainer] Loading testing data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
-2026-01-18 12:24:25,883 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
-2026-01-18 12:24:25,886 - __main__ - INFO - [ModelTrainer] Successfully split data into features and target
-2026-01-18 12:24:25,886 - __main__ - INFO - [ModelTrainer] Initializing LightGBM classifier
-2026-01-18 12:24:25,886 - __main__ - INFO - [ModelTrainer] Starting Randomized Search CV for hyperparameter tuning
-2026-01-18 12:24:25,886 - __main__ - INFO - [ModelTrainer] Fitting Randomized Search CV
-2026-01-18 12:25:25,163 - __main__ - INFO - [ModelTrainer] Best hyperparameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.19524445288831496), 'max_depth': 26, 'n_estimators': 352, 'num_leaves': 255}
-2026-01-18 12:25:25,164 - __main__ - INFO - [ModelTrainer] Completing model training
-2026-01-18 12:25:25,164 - __main__ - INFO - [ModelTrainer] Evaluating model performance on test data
-2026-01-18 12:25:25,254 - __main__ - INFO - [ModelTrainer] Accuracy: 0.8790725326991676
-2026-01-18 12:25:25,257 - __main__ - INFO - [ModelTrainer] Precision: 0.8593327321911632
-2026-01-18 12:25:25,260 - __main__ - INFO - [ModelTrainer] Recall: 0.9065398335315101
-2026-01-18 12:25:25,264 - __main__ - INFO - [ModelTrainer] F1 Score: 0.8823052887397292
-2026-01-18 12:25:25,266 - __main__ - INFO - [ModelTrainer] Saving model ...
-2026-01-18 12:25:25,429 - __main__ - INFO - [ModelTrainer] Model saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\models\lgbm_model.pkl
-2026-01-18 12:25:25,430 - __main__ - INFO - [ModelTrainer] Logging model to MLflow
-2026-01-18 12:25:25,436 - __main__ - INFO - [ModelTrainer] Logging evaluation metrics to MLflow
-2026-01-18 12:25:25,452 - __main__ - INFO - [ModelTrainer] Logging parameters to MLflow
-2026-01-18 12:25:25,466 - __main__ - INFO - [ModelTrainer] Model training pipeline completed successfully
+2026-01-18 18:32:49,735 - utils.common_functions - INFO - Successfully readed yml file at D:\Course-work\001\project_1\ml-ops-project_1\config\config.yml
+2026-01-18 18:32:49,736 - src.data_ingestion - INFO - ================> Data ingestion started with GCP bucket: ds_mlops_learn_bucket_0001 and file: dataset_hotel_reservations.csv
+2026-01-18 18:32:52,524 - src.data_ingestion - INFO - ---:) Data downloaded successfully from GCP bucket ds_mlops_learn_bucket_0001 to D:\Course-work\001\project_1\ml-ops-project_1\artifacts\raw\raw_data.csv
+2026-01-18 18:32:52,723 - src.data_ingestion - INFO - ---:) Training data saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\raw\train_data.csv
+2026-01-18 18:32:52,747 - src.data_ingestion - INFO - ---:) Testing data saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\raw\test_data.csv
+2026-01-18 18:32:52,750 - src.data_ingestion - INFO - ---:) Data ingestion process completed successfully.
+2026-01-18 18:32:52,750 - src.data_ingestion - INFO - ================> Data ingestion process finished.
+2026-01-18 18:32:52,752 - utils.common_functions - INFO - Successfully readed yml file at D:\Course-work\001\project_1\ml-ops-project_1\config\config.yml
+2026-01-18 18:32:52,752 - src.data_preprocessing - INFO - Created directory for processed data at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing
+2026-01-18 18:32:52,752 - src.data_preprocessing - INFO - [DataProcessor] : Loading data from RAW directory
+2026-01-18 18:32:52,805 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\raw\train_data.csv
+2026-01-18 18:32:52,824 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\raw\test_data.csv
+2026-01-18 18:32:52,824 - src.data_preprocessing - INFO - [DataProcessor] : Starting data processing...
+2026-01-18 18:32:52,824 - src.data_preprocessing - INFO - [DataProcessor] : Dropping the unused columns
+2026-01-18 18:32:52,850 - src.data_preprocessing - INFO - [DataProcessor] : Applying Label Encoding to categorical columns
+2026-01-18 18:32:52,866 - src.data_preprocessing - INFO - [DataProcessor] : Label Mapping are:
+2026-01-18 18:32:52,866 - src.data_preprocessing - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+2026-01-18 18:32:52,866 - src.data_preprocessing - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2026-01-18 18:32:52,866 - src.data_preprocessing - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+2026-01-18 18:32:52,866 - src.data_preprocessing - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+2026-01-18 18:32:52,866 - src.data_preprocessing - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2026-01-18 18:32:52,866 - src.data_preprocessing - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+2026-01-18 18:32:52,866 - src.data_preprocessing - INFO - [DataProcessor] : Skewness handling using log1p transformation
+2026-01-18 18:32:52,870 - src.data_preprocessing - INFO - [DataProcessor] : Data processing completed.
+2026-01-18 18:32:52,870 - src.data_preprocessing - INFO - [DataProcessor] : Starting data processing...
+2026-01-18 18:32:52,870 - src.data_preprocessing - INFO - [DataProcessor] : Dropping the unused columns
+2026-01-18 18:32:52,874 - src.data_preprocessing - INFO - [DataProcessor] : Applying Label Encoding to categorical columns
+2026-01-18 18:32:52,879 - src.data_preprocessing - INFO - [DataProcessor] : Label Mapping are:
+2026-01-18 18:32:52,879 - src.data_preprocessing - INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+2026-01-18 18:32:52,879 - src.data_preprocessing - INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2026-01-18 18:32:52,879 - src.data_preprocessing - INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+2026-01-18 18:32:52,879 - src.data_preprocessing - INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+2026-01-18 18:32:52,879 - src.data_preprocessing - INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2026-01-18 18:32:52,879 - src.data_preprocessing - INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+2026-01-18 18:32:52,879 - src.data_preprocessing - INFO - [DataProcessor] : Skewness handling using log1p transformation
+2026-01-18 18:32:52,881 - src.data_preprocessing - INFO - [DataProcessor] : Data processing completed.
+2026-01-18 18:32:52,881 - src.data_preprocessing - INFO - [DataProcessor] : Handling data imbalance using SMOTE
+2026-01-18 18:32:57,620 - src.data_preprocessing - INFO - [DataProcessor] : Data balancing completed.
+2026-01-18 18:32:57,621 - src.data_preprocessing - INFO - [DataProcessor] : Handling data imbalance using SMOTE
+2026-01-18 18:32:57,639 - src.data_preprocessing - INFO - [DataProcessor] : Data balancing completed.
+2026-01-18 18:32:57,639 - src.data_preprocessing - INFO - [DataProcessor] : Starting feature selection using RandomForestClassifier
+2026-01-18 18:33:00,542 - src.data_preprocessing - INFO - [DataProcessor] : Top 10 features selected: ['lead_time' 'no_of_special_requests' 'avg_price_per_room' 'arrival_month'
+ 'arrival_date' 'market_segment_type' 'no_of_week_nights'
+ 'no_of_weekend_nights' 'room_type_reserved' 'type_of_meal_plan']
+2026-01-18 18:33:00,543 - src.data_preprocessing - INFO - [DataProcessor] : Feature selection completed.
+2026-01-18 18:33:00,549 - src.data_preprocessing - INFO - [DataProcessor] : Saving processed data to D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 18:33:00,612 - src.data_preprocessing - INFO - [DataProcessor] : Processed data saved successfully at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 18:33:00,612 - src.data_preprocessing - INFO - [DataProcessor] : Saving processed data to D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 18:33:00,632 - src.data_preprocessing - INFO - [DataProcessor] : Processed data saved successfully at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 18:33:00,632 - src.data_preprocessing - INFO - [DataProcessor] : Data processing pipeline completed successfully.
+2026-01-18 18:33:02,552 - src.model_training - INFO - [ModelTrainer] Starting model training pipeline
+2026-01-18 18:33:02,553 - src.model_training - INFO - [ModelTrainer] Start the model tracking with MLflow...
+2026-01-18 18:33:02,553 - src.model_training - INFO - [ModelTrainer] Logging the traing & testing dat to MLflow
+2026-01-18 18:33:02,568 - src.model_training - INFO - [ModelTrainer] Loading training data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 18:33:02,597 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 18:33:02,597 - src.model_training - INFO - [ModelTrainer] Loading testing data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 18:33:02,617 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 18:33:02,619 - src.model_training - INFO - [ModelTrainer] Successfully split data into features and target
+2026-01-18 18:33:02,619 - src.model_training - INFO - [ModelTrainer] Initializing LightGBM classifier
+2026-01-18 18:33:02,619 - src.model_training - INFO - [ModelTrainer] Starting Randomized Search CV for hyperparameter tuning
+2026-01-18 18:33:02,619 - src.model_training - INFO - [ModelTrainer] Fitting Randomized Search CV
+2026-01-18 18:33:53,806 - src.model_training - INFO - [ModelTrainer] Best hyperparameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.19524445288831496), 'max_depth': 26, 'n_estimators': 352, 'num_leaves': 255}
+2026-01-18 18:33:53,806 - src.model_training - INFO - [ModelTrainer] Completing model training
+2026-01-18 18:33:53,806 - src.model_training - INFO - [ModelTrainer] Evaluating model performance on test data
+2026-01-18 18:33:53,902 - src.model_training - INFO - [ModelTrainer] Accuracy: 0.8790725326991676
+2026-01-18 18:33:53,907 - src.model_training - INFO - [ModelTrainer] Precision: 0.8593327321911632
+2026-01-18 18:33:53,910 - src.model_training - INFO - [ModelTrainer] Recall: 0.9065398335315101
+2026-01-18 18:33:53,912 - src.model_training - INFO - [ModelTrainer] F1 Score: 0.8823052887397292
+2026-01-18 18:33:53,914 - src.model_training - INFO - [ModelTrainer] Saving model ...
+2026-01-18 18:33:54,067 - src.model_training - INFO - [ModelTrainer] Model saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\models\lgbm_model.pkl
+2026-01-18 18:33:54,068 - src.model_training - INFO - [ModelTrainer] Logging model to MLflow
+2026-01-18 18:33:54,073 - src.model_training - INFO - [ModelTrainer] Logging evaluation metrics to MLflow
+2026-01-18 18:33:54,091 - src.model_training - INFO - [ModelTrainer] Logging parameters to MLflow
+2026-01-18 18:33:54,106 - src.model_training - INFO - [ModelTrainer] Model training pipeline completed successfully
