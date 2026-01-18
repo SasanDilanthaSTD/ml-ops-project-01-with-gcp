@@ -19,3 +19,7 @@ artifacts/models/
 mlruns/
 # local db
 *.db
+
+
+# Package folder
+MLOPS_Project_1.egg-info/
