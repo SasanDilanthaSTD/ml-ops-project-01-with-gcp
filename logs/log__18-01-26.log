@@ -1,0 +1,19 @@
+2026-01-18 00:11:54,593 - __main__ - INFO - [ModelTrainer] Starting model training pipeline
+2026-01-18 00:11:54,593 - __main__ - INFO - [ModelTrainer] Loading training data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 00:11:54,614 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 00:11:54,614 - __main__ - INFO - [ModelTrainer] Loading testing data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 00:11:54,624 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 00:11:54,626 - __main__ - INFO - [ModelTrainer] Successfully split data into features and target
+2026-01-18 00:11:54,626 - __main__ - INFO - [ModelTrainer] Initializing LightGBM classifier
+2026-01-18 00:11:54,626 - __main__ - INFO - [ModelTrainer] Starting Randomized Search CV for hyperparameter tuning
+2026-01-18 00:11:54,626 - __main__ - INFO - [ModelTrainer] Fitting Randomized Search CV
+2026-01-18 00:12:55,013 - __main__ - INFO - [ModelTrainer] Best hyperparameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.19524445288831496), 'max_depth': 26, 'n_estimators': 352, 'num_leaves': 255}
+2026-01-18 00:12:55,013 - __main__ - INFO - [ModelTrainer] Completing model training
+2026-01-18 00:12:55,013 - __main__ - INFO - [ModelTrainer] Evaluating model performance on test data
+2026-01-18 00:12:55,100 - __main__ - INFO - [ModelTrainer] Accuracy: 0.8790725326991676
+2026-01-18 00:12:55,103 - __main__ - INFO - [ModelTrainer] Precision: 0.8593327321911632
+2026-01-18 00:12:55,106 - __main__ - INFO - [ModelTrainer] Recall: 0.9065398335315101
+2026-01-18 00:12:55,109 - __main__ - INFO - [ModelTrainer] F1 Score: 0.8823052887397292
+2026-01-18 00:12:55,110 - __main__ - INFO - [ModelTrainer] Saving model ...
+2026-01-18 00:12:55,272 - __main__ - INFO - [ModelTrainer] Model saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\models\lgbm_model.pkl
+2026-01-18 00:12:55,272 - __main__ - INFO - [ModelTrainer] Model training pipeline completed successfully
