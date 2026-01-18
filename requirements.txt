@@ -11,3 +11,4 @@ statsmodels
 imbalanced-learn
 xgboost
 lightgbm
+mlflow

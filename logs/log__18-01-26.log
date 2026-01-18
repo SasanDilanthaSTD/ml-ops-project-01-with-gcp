@@ -17,3 +17,51 @@
 2026-01-18 00:12:55,110 - __main__ - INFO - [ModelTrainer] Saving model ...
 2026-01-18 00:12:55,272 - __main__ - INFO - [ModelTrainer] Model saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\models\lgbm_model.pkl
 2026-01-18 00:12:55,272 - __main__ - INFO - [ModelTrainer] Model training pipeline completed successfully
+2026-01-18 12:13:04,993 - __main__ - INFO - [ModelTrainer] Starting model training pipeline
+2026-01-18 12:13:04,993 - __main__ - INFO - [ModelTrainer] Start the model tracking with MLflow...
+2026-01-18 12:13:04,993 - __main__ - INFO - [ModelTrainer] Logging the traing & testing dat to MLflow
+2026-01-18 12:13:05,010 - __main__ - INFO - [ModelTrainer] Loading training data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 12:13:05,040 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 12:13:05,040 - __main__ - INFO - [ModelTrainer] Loading testing data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 12:13:05,061 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 12:13:05,069 - __main__ - INFO - [ModelTrainer] Successfully split data into features and target
+2026-01-18 12:13:05,069 - __main__ - INFO - [ModelTrainer] Initializing LightGBM classifier
+2026-01-18 12:13:05,069 - __main__ - INFO - [ModelTrainer] Starting Randomized Search CV for hyperparameter tuning
+2026-01-18 12:13:05,069 - __main__ - INFO - [ModelTrainer] Fitting Randomized Search CV
+2026-01-18 12:13:58,380 - __main__ - INFO - [ModelTrainer] Best hyperparameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.19524445288831496), 'max_depth': 26, 'n_estimators': 352, 'num_leaves': 255}
+2026-01-18 12:13:58,380 - __main__ - INFO - [ModelTrainer] Completing model training
+2026-01-18 12:13:58,380 - __main__ - INFO - [ModelTrainer] Evaluating model performance on test data
+2026-01-18 12:13:58,469 - __main__ - INFO - [ModelTrainer] Accuracy: 0.8790725326991676
+2026-01-18 12:13:58,472 - __main__ - INFO - [ModelTrainer] Precision: 0.8593327321911632
+2026-01-18 12:13:58,475 - __main__ - INFO - [ModelTrainer] Recall: 0.9065398335315101
+2026-01-18 12:13:58,478 - __main__ - INFO - [ModelTrainer] F1 Score: 0.8823052887397292
+2026-01-18 12:13:58,479 - __main__ - INFO - [ModelTrainer] Saving model ...
+2026-01-18 12:13:58,640 - __main__ - INFO - [ModelTrainer] Model saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\models\lgbm_model.pkl
+2026-01-18 12:13:58,640 - __main__ - INFO - [ModelTrainer] Logging model to MLflow
+2026-01-18 12:13:58,645 - __main__ - INFO - [ModelTrainer] Logging evaluation metrics to MLflow
+2026-01-18 12:13:58,659 - __main__ - INFO - [ModelTrainer] Logging parameters to MLflow
+2026-01-18 12:13:58,672 - __main__ - INFO - [ModelTrainer] Model training pipeline completed successfully
+2026-01-18 12:24:25,815 - __main__ - INFO - [ModelTrainer] Starting model training pipeline
+2026-01-18 12:24:25,815 - __main__ - INFO - [ModelTrainer] Start the model tracking with MLflow...
+2026-01-18 12:24:25,816 - __main__ - INFO - [ModelTrainer] Logging the traing & testing dat to MLflow
+2026-01-18 12:24:25,831 - __main__ - INFO - [ModelTrainer] Loading training data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 12:24:25,861 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_train_data.csv
+2026-01-18 12:24:25,861 - __main__ - INFO - [ModelTrainer] Loading testing data from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 12:24:25,883 - utils.common_functions - INFO - Data loaded successfully from D:\Course-work\001\project_1\ml-ops-project_1\artifacts\data_processing\processed_test_data.csv
+2026-01-18 12:24:25,886 - __main__ - INFO - [ModelTrainer] Successfully split data into features and target
+2026-01-18 12:24:25,886 - __main__ - INFO - [ModelTrainer] Initializing LightGBM classifier
+2026-01-18 12:24:25,886 - __main__ - INFO - [ModelTrainer] Starting Randomized Search CV for hyperparameter tuning
+2026-01-18 12:24:25,886 - __main__ - INFO - [ModelTrainer] Fitting Randomized Search CV
+2026-01-18 12:25:25,163 - __main__ - INFO - [ModelTrainer] Best hyperparameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.19524445288831496), 'max_depth': 26, 'n_estimators': 352, 'num_leaves': 255}
+2026-01-18 12:25:25,164 - __main__ - INFO - [ModelTrainer] Completing model training
+2026-01-18 12:25:25,164 - __main__ - INFO - [ModelTrainer] Evaluating model performance on test data
+2026-01-18 12:25:25,254 - __main__ - INFO - [ModelTrainer] Accuracy: 0.8790725326991676
+2026-01-18 12:25:25,257 - __main__ - INFO - [ModelTrainer] Precision: 0.8593327321911632
+2026-01-18 12:25:25,260 - __main__ - INFO - [ModelTrainer] Recall: 0.9065398335315101
+2026-01-18 12:25:25,264 - __main__ - INFO - [ModelTrainer] F1 Score: 0.8823052887397292
+2026-01-18 12:25:25,266 - __main__ - INFO - [ModelTrainer] Saving model ...
+2026-01-18 12:25:25,429 - __main__ - INFO - [ModelTrainer] Model saved at D:\Course-work\001\project_1\ml-ops-project_1\artifacts\models\lgbm_model.pkl
+2026-01-18 12:25:25,430 - __main__ - INFO - [ModelTrainer] Logging model to MLflow
+2026-01-18 12:25:25,436 - __main__ - INFO - [ModelTrainer] Logging evaluation metrics to MLflow
+2026-01-18 12:25:25,452 - __main__ - INFO - [ModelTrainer] Logging parameters to MLflow
+2026-01-18 12:25:25,466 - __main__ - INFO - [ModelTrainer] Model training pipeline completed successfully

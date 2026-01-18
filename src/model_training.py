@@ -6,6 +6,9 @@ import lightgbm as lgb
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from scipy.stats import randint
 
+import mlflow
+import mlflow.sklearn 
+
 from src.logger import get_logger
 from src.custom_exception import CustomException
 from config.path_config import *
@@ -117,13 +120,30 @@ class ModelTrainer:
         
     def run(self):
         try:
-            logger.info(f"[ModelTrainer] Starting model training pipeline")
-            X_train, y_train, X_test, y_test = self.load_and_split_data()
-            model = self.train_model(X_train, y_train)
-            metrics_df = self.evaluate_model(model, X_test, y_test)
-            self.save_model(model)
-            
-            logger.info(f"[ModelTrainer] Model training pipeline completed successfully")
+            with mlflow.start_run():
+                logger.info(f"[ModelTrainer] Starting model training pipeline")
+                
+                logger.info("[ModelTrainer] Start the model tracking with MLflow...")
+                
+                logger.info(f"[ModelTrainer] Logging the traing & testing dat to MLflow")
+                mlflow.log_artifact(self.train_path, artifact_path="datasets")
+                mlflow.log_artifact(self.test_path, artifact_path="datasets")
+                
+                X_train, y_train, X_test, y_test = self.load_and_split_data()
+                model = self.train_model(X_train, y_train)
+                metrics_df = self.evaluate_model(model, X_test, y_test)
+                self.save_model(model)
+                
+                logger.info("[ModelTrainer] Logging model to MLflow")
+                mlflow.log_artifact(self.model_output)
+                
+                logger.info("[ModelTrainer] Logging evaluation metrics to MLflow")
+                mlflow.log_metrics(metrics_df.iloc[0].to_dict())
+                
+                logger.info("[ModelTrainer] Logging parameters to MLflow")
+                mlflow.log_params(model.get_params())
+                
+                logger.info(f"[ModelTrainer] Model training pipeline completed successfully")
         except Exception as e:
             logger.exception(f"[ModelTrainer] Error in model training pipeline: {e}")
             raise CustomException("Model training pipeline failed", e)

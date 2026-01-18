@@ -14,3 +14,8 @@ artifacts/models/
 *.ipynb_checkpoints/
 # VSCode settings
 .vscode/
+
+# MLflow artifacts
+mlruns/
+# local db
+*.db
