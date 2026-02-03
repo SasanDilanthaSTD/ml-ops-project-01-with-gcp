@@ -20,6 +20,10 @@ mlruns/
 # local db
 *.db
 
+# ENV
+.env
+.env.local
+
 
 # Package folder
 MLOPS_Project_1.egg-info/
