@@ -27,13 +27,13 @@ pipeline{
             }
         }
 
-        stage('Buildind and Pushing Docker Image to GCR'){
+        stage('Building and Pushing Docker Image to GCR'){
             steps{
                 withCredentials([file(credentialsId: 'gcp-key', variable: 'GCP_APP_CREDENTIALS')]){
                     script{
                         echo 'Building and Pushing Docker Image to GCR...'
                         sh '''
-                            export PATH=$PATH:$(GCLOUD_PATH)
+                            export PATH=$PATH:${GCLOUD_PATH}
 
                             gcloud auth activate-service-account --key-file=${GCP_APP_CREDENTIALS}
 
@@ -44,6 +44,7 @@ pipeline{
                             docker build -t gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest .
                             docker push gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest
                         '''
+                    }
                 }
             }
         }
