@@ -1,23 +1,22 @@
-pipeline{
+pipeline {
     agent any
 
-    environment{
+    environment {
         VENV_DIR = ".venv"
         GCP_PROJECT_ID = "mlops-learn-478120"
         GCLOUD_PATH = "/var/jenkins_home/google-cloud-sdk/bin"
     }
 
-    stages{
-        stage('Cloning GitHub repo to Jenkins'){
-            steps{
+    stages {
+        stage('Cloning GitHub repo') {
+            steps {
                 echo 'Cloning the GitHub repo...'
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/SasanDilanthaSTD/ml-ops-project-01-with-gcp.git']])
             }
         }
 
-        stage('Setting up Python Virtual Environment and Installing Dependencies'){
-            steps{
-                echo 'Setting up Python Virtual Environment and Installing Dependencies...'
+        stage('Install Dependencies') {
+            steps {
                 sh '''
                     python -m venv ${VENV_DIR}
                     . ${VENV_DIR}/bin/activate
@@ -27,36 +26,29 @@ pipeline{
             }
         }
 
-        stage('Run Training Pipeline'){
-            steps{
-                steps{
-                    withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
-                        echo 'Running the Training Pipeline...'
-                        sh '''
-                            . ${VENV_DIR}/bin/activate
-                            # Add the current directory to Python Path
-                            export PYTHONPATH=$PYTHONPATH:. 
-                            python pipeline/training_pipeline.py
-                        '''
-                    }
+        stage('Run Training Pipeline') {
+            steps {
+                // withCredentials must be INSIDE steps
+                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+                    sh '''
+                        . ${VENV_DIR}/bin/activate
+                        export PYTHONPATH=$PYTHONPATH:.
+                        python pipeline/training_pipeline.py
+                    '''
                 }
             }
         }
 
-        stage('Building and Pushing Docker Image to GCR'){
-            steps{
-                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
-                    script{
-                        echo 'Building and Pushing Docker Image to GCR...'
+        stage('Build and Push Docker') {
+            steps {
+                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+                    // Use script block only if you need Groovy logic (if/else, loops)
+                    script {
                         sh '''
                             export PATH=$PATH:${GCLOUD_PATH}
-
                             gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
-
                             gcloud config set project ${GCP_PROJECT_ID}
-
                             gcloud auth configure-docker --quiet
-
                             docker build -t gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest .
                             docker push gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest
                         '''
