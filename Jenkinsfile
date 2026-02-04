@@ -27,6 +27,20 @@ pipeline{
             }
         }
 
+        stage('Run Training Pipeline'){
+            steps{
+                // Use the same credentials block to provide the JSON key
+                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
+                    echo 'Running the Training Pipeline...'
+                    sh '''
+                        . ${VENV_DIR}/bin/activate
+                        # Now the script has the credentials it needs via the env var
+                        python pipeline/training_pipeline.py
+                    '''
+                }
+            }
+        }
+
         stage('Building and Pushing Docker Image to GCR'){
             steps{
                 withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
