@@ -52,11 +52,11 @@ pipeline {
                             gcloud config set project ${GCP_PROJECT_ID}
 
                             gcloud run deploy ml-ops-project-1 \
-                                --image gcr.io/${GCP_PROJECT_ID}/ml-ops-project-1:latest \
-                                --platform managed \
-                                --region us-central1 \
+                                --image=gcr.io/${GCP_PROJECT_ID}/ml-ops-project-1:latest \
+                                --platform=managed \
+                                --region=us-central1 \
                                 --allow-unauthenticated \
-                                --memory 512Mi
+                                --memory=512Mi
                         '''
                     }
                 }
