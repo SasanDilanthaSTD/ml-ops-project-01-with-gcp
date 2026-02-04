@@ -9,7 +9,7 @@ class CustomException(Exception):
     @staticmethod
     def get_detailed_error_message(error_message, error_details):
         # Extract traceback from sys.exc_info(), not from error object
-        exc_type, exc_obj, exc_tb = traceback.extract_tb(sys.exc_info())
+        exc_type, exc_obj, exc_tb = traceback.sys.exc_info()
 
         # If traceback is not available
         if exc_tb is None:
