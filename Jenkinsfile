@@ -50,6 +50,8 @@ pipeline {
                             gcloud config set project ${GCP_PROJECT_ID}
                             gcloud auth configure-docker --quiet
                             docker build -t gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest .
+                            export DOCKER_CLIENT_TIMEOUT=300
+                            export COMPOSE_HTTP_TIMEOUT=300
                             docker push gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest
                         '''
                     }
