@@ -6,9 +6,10 @@ class CustomException(Exception):
         super().__init__(error_message)
         self.error_message = self.get_detailed_error_message(error_message, error_details)
 
-    def get_detailed_error_message(self, error_message, error_details):
+    @staticmethod
+    def get_detailed_error_message(error_message, error_details):
         # Extract traceback from sys.exc_info(), not from error object
-        exc_type, exc_obj, exc_tb = sys.exc_info()
+        exc_type, exc_obj, exc_tb = traceback.extract_tb(sys.exc_info())
 
         # If traceback is not available
         if exc_tb is None:
