@@ -39,6 +39,26 @@ pipeline {
             }
         }
 
+        stage('Build and Push Docker') {
+            steps {
+                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+                    // Use script block only if you need Groovy logic (if/else, loops)
+                    script {
+                        sh '''
+                            export PATH=$PATH:${GCLOUD_PATH}
+                            gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
+                            gcloud config set project ${GCP_PROJECT_ID}
+                            gcloud auth configure-docker --quiet
+                            docker build -t gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest .
+                            export DOCKER_CLIENT_TIMEOUT=300
+                            export COMPOSE_HTTP_TIMEOUT=300
+                            docker push gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest
+                        '''
+                    }
+                }
+            }
+        }
+
         
         
         stage('Deploy to Google cloud run') {
@@ -52,11 +72,11 @@ pipeline {
                             gcloud config set project ${GCP_PROJECT_ID}
 
                             gcloud run deploy ml-ops-project-1 \
-                                --image=gcr.io/${GCP_PROJECT_ID}/ml-ops-project-1:latest \
-                                --platform=managed \
-                                --region=us-central1 \
+                                --image gcr.io/${GCP_PROJECT_ID}/ml-ops-project-1:latest \
+                                --platform managed \
+                                --region us-central1 \
                                 --allow-unauthenticated \
-                                --memory=512Mi
+                                --memory 512Mi
                         '''
                     }
                 }
