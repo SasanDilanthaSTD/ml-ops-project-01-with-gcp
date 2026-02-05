@@ -7,7 +7,14 @@ from config.path_config import MODEL_OUTPUT_PATH
 app = Flask(__name__)
 
 # Load the pre-trained model
-model = joblib.load(MODEL_OUTPUT_PATH)
+try:
+    print(f"Attempting to load model from: {MODEL_OUTPUT_PATH}")
+    model = joblib.load(MODEL_OUTPUT_PATH)
+    print("Model loaded successfully!")
+except Exception as e:
+    print(f"Error loading model: {e}")
+    # Fallback or exit gracefully so logs show the error
+    model = None
 
 @app.route('/', methods=['GET', 'POST'])
 def index():

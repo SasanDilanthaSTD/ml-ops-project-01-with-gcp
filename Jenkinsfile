@@ -64,19 +64,19 @@ pipeline {
         stage('Deploy to Google cloud run') {
             steps {
                 withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
-                    // Use script block only if you need Groovy logic (if/else, loops)
                     script {
                         sh '''
                             export PATH=$PATH:${GCLOUD_PATH}
                             gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
                             gcloud config set project ${GCP_PROJECT_ID}
-
+        
                             gcloud run deploy mlops-project-01 \
                                 --image gcr.io/${GCP_PROJECT_ID}/mlops-project-01:latest \
                                 --platform managed \
                                 --region us-central1 \
                                 --allow-unauthenticated \
-                                --memory 1Gi
+                                --memory 2Gi \
+                                --cpu 1 \
                                 --timeout 300
                         '''
                     }
