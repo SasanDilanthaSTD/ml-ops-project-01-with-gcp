@@ -24,6 +24,8 @@ COPY . .
 # 3. Install the current project in editable mode
 RUN pip install --no-cache-dir -e .
 
-EXPOSE 5000
+# EXPOSE 5000
+EXPOSE 8080
+
 
 CMD [ "python" , "app.py" ]

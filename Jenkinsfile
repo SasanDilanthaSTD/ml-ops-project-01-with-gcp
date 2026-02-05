@@ -76,7 +76,8 @@ pipeline {
                                 --platform managed \
                                 --region us-central1 \
                                 --allow-unauthenticated \
-                                --memory 512Mi
+                                --memory 1Gi
+                                --timeout 300
                         '''
                     }
                 }
